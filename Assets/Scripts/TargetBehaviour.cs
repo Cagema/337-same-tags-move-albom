@@ -24,6 +24,9 @@ public class TargetBehaviour : MonoBehaviour
                 break;
             }
         }
+
+        Vector3 dir = transform.position - _playerPos;
+        transform.Rotate(0, 0, Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg - 90f);
     }
     private void Update()
     {
